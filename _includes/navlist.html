@@ -1,0 +1,8 @@
+<br/>
+<ul class="nav nav-tabs nav-stacked distal-docs-nav-list" >
+  {% for p in site.posts reversed %}
+  {% if p.category == page.thecategory %}
+  <li><a href="#{{ p.name }}">{{ p.title }}</a></li>
+  {% endif %}
+  {% endfor %}
+</ul>

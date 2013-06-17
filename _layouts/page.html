@@ -1,0 +1,24 @@
+---
+layout: bootstrap
+---
+
+
+{% include navbar.html %}
+
+  <div class="row">
+    <div class="span3 scroll-target">
+      {% if page.thecategory %}
+      {% include navlist.html %}
+      {% endif %}
+    </div>
+    <div class="span7 offset1">
+      <div style="height: 50px">&nbsp;</div>
+
+      {{ content }}
+
+      {% if page.thecategory %}
+      {% include navdata.html %}
+      {% endif %}
+
+    </div>
+  </div>

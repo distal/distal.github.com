@@ -1,0 +1,37 @@
+---
+layout: bootstrap
+---
+
+<div class="masthead">
+
+  <div class="jumbotron">
+    <h1>DiStaL</h1>
+    <span class="lead">
+      A <em>DSL</em> for <em>DISTributed ALgorithms</em>.<br />
+    </span>
+  </div> <!-- Jumbotron -->
+</div>
+
+
+      {% include navbar.html %}
+
+<div class="row">
+
+  <div class="span6 offset1">
+    <div class="container">
+      <div class="row">
+        {% for p in site.posts reversed %}
+        {% if p.category == page.thecategory %}
+        <div class="span4 hero-unit">
+        <h2><a name="{{p.name}}"></a>{{ p.title }}</h2>
+        {{ p.content }}
+        </div>
+        {% endif %}
+        {% endfor %}
+
+
+        {{ content }}
+
+      </div>
+    </div>
+</div>

@@ -12,7 +12,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -26,7 +26,7 @@ time, mark, audio, video {
 /* Base text styles */
 
 body {
-  padding:10px 50px 0 0;
+  padding:10px 0px 0 0;
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	color: #232323;
@@ -34,17 +34,17 @@ body {
 	margin: 0;
 	line-height: 1.8em;
 	-webkit-font-smoothing: antialiased;
-
+	width:100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color:#232323;
-  margin:36px 0 10px;
+  /* margin:36px 0 10px; */
 }
 
 p, ul, ol, table, dl {
-  margin:0 0 22px;
-}
+  /* margin:0 0 22px; */
+} 
 
 h1, h2, h3 {
 	font-family: Arvo, Monaco, serif;
@@ -195,13 +195,6 @@ td {
 	background: #ccc;
  }
 
-
-/* Wrapper */
-.wrapper {
-  width:960px;
-}
-
-
 /* Header */
 
 header {
@@ -310,104 +303,34 @@ a.buttons:hover {
 
 section {
   width:650px;
-  float:right;
-  padding-bottom:50px;
+  float:left;
+  padding-left:270px;
+  padding-bottom:30px;
+  padding-top: 30px;
 }
 
 
 /* Footer */
-
-footer {
-  width:170px;
-  float:left;
-  position:fixed;
-  bottom:10px;
-	padding-left: 50px;
+.centered {
+    text-align: center;
+    background:#AAAAAA;
+    width:100%;
 }
 
-@media print, screen and (max-width: 960px) {
-
-  div.wrapper {
-    width:auto;
-    margin:0;
-  }
-
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
-  }
-
-	footer {
-		border-top: 1px solid #ccc;
-		margin:0 84px 0 50px;
-		padding:0;
-	}
-
-  header {
-    padding-right:320px;
-  }
-
-  section {
-    padding:20px 84px 20px 50px;
-    margin:0 0 20px;
-  }
-
-  header a small {
-    display:inline;
-  }
-
-  header ul {
-    position:absolute;
-    right:130px;
-    top:84px;
-  }
+.tiny {
+    font-size: 8pt;
 }
 
-@media print, screen and (max-width: 720px) {
-  body {
-    word-wrap:break-word;
-  }
+html, body, #push-footer { height: 100%; margin: 0; padding: 0; }
+body > #push-footer { height: auto; min-height: 100%; }
+#content { padding-bottom: 3em; }
 
-  header {
-    padding:10px 20px 0;
-		margin-right: 0;
-  }
-
-	section {
-    padding:10px 0 10px 20px;
-    margin:0 0 30px;
-  }
-
-	footer {
-		margin: 0 0 0 30px;
-	}
-
-  header ul, header p.view {
-    position:static;
-  }
+#footer {
+ clear: both;
+ position: relative;
+ z-index: 10;
+ height: 3em;
+ margin-top: -3em;
 }
 
-@media print, screen and (max-width: 480px) {
 
-  header ul li.download {
-    display:none;
-  }
-
-	footer {
-		margin: 0 0 0 20px;
-	}
-
-	footer a{
-		display:block;
-	}
-
-}
-
-@media print {
-  body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
-  }
-}

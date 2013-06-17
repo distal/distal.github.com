@@ -1,0 +1,8 @@
+{% for p in site.posts reversed %}
+{% if p.category == page.thecategory %}
+<section id="{{p.name}}">
+<h2>{{ p.title }}</h2>
+{{ p.content }}
+</section>
+{% endif %}
+{% endfor %}
